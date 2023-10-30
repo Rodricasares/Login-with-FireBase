@@ -41,13 +41,14 @@ export function Login() {
               <InputControl label='Passwork ' placeholder='Ingrese un passwork'
         onChange={(event)=>setValues((prev)=> ({...prev, pass:event.target.value}))}
         ></InputControl>
-        <div className={styles.footer}>{errorMsg}</div>
+        <div className={styles.footer}>{errorMsg}
         <button onClick={registro} disabled={submitBtnDisable}>Login</button>
         <p>Crear cuenta 
             <span>
                 <Link to='/signup'>Signup</Link>
             </span>
         </p>
+        </div>
       </div>
     </div>
   );

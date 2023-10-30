@@ -28,7 +28,7 @@ export function Signup() {
       })
       .catch((err) => {
         setSubmitBtnDisable(false);
-        setErrorMsg(err.message)
+        setErrorMsg(err.message);
       });
   };
 
@@ -36,23 +36,38 @@ export function Signup() {
     <div className={styles.container}>
       <div className={styles.innerBox}>
         <h1 className={styles.heading}>Signup</h1>
-        <InputControl label='Nombre ' placeholder='Ingrese un nombre'
-        onChange={(event)=>setValues((prev)=> ({...prev, name:event.target.value}))}
+        <InputControl
+          label="Nombre "
+          placeholder="Ingrese un nombre"
+          onChange={(event) =>
+            setValues((prev) => ({ ...prev, name: event.target.value }))
+          }
         ></InputControl>
-        <InputControl label='Email ' placeholder='Ingrese un email'
-        onChange={(event)=>setValues((prev)=> ({...prev, email:event.target.value}))}
+        <InputControl
+          label="Email "
+          placeholder="Ingrese un email"
+          onChange={(event) =>
+            setValues((prev) => ({ ...prev, email: event.target.value }))
+          }
         ></InputControl>
-              <InputControl label='Passwork ' placeholder='Ingrese un passwork'
-        onChange={(event)=>setValues((prev)=> ({...prev, pass:event.target.value}))}
+        <InputControl
+          label="Passwork "
+          placeholder="Ingrese un passwork"
+          onChange={(event) =>
+            setValues((prev) => ({ ...prev, pass: event.target.value }))
+          }
         ></InputControl>
         <div className={styles.footer}>
-            <b className={styles.error}>{errorMsg}</b>
-            <button onClick={signup} disabled={submitBtnDisable}>Creár usuario</button>
-            <p>Iniciar sesión si dispones de tú cuenta de usuario
-                <span>
-                    <Link to='/login'> Login </Link>
-                </span>
-            </p>
+          <b className={styles.error}>{errorMsg}</b>
+          <button onClick={signup} disabled={submitBtnDisable}>
+            Creár usuario
+          </button>
+          <p>
+            Iniciar sesión si dispones de tú cuenta de usuario
+            <span>
+              <Link to="/login"> Login </Link>
+            </span>
+          </p>
         </div>
       </div>
     </div>

@@ -1,0 +1,38 @@
+.home {
+  
+    height: 100%;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+ 
+h1{
+  color: #4e0083cb;}
+  
+  button {
+    outline: none;
+    border: none;
+    background-color: #fff;
+    color: #c9aadd;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px 16px;
+    width: 100%;
+    transition: 100ms;
+    cursor: pointer;
+  }
+  
+  .button:disabled {
+    background-color: gray !important;
+  }
+  
+  .button:hover {
+    background-color: #aa2aff;
+  }
+  
